@@ -1,46 +1,120 @@
 *start
-
-[title name="走るか寝るかするメロス"]
+[title name="星あかりの配達便"]
 [hidemenubutton]
-[wait time=200]
-[freeimage layer="base"]
-
-「走るか寝るかするメロス」[l][r]
-
-メロスは激怒した。[l][r]
-
-必ず、かの邪智暴虐の王を除かねばならぬと決意した。[l][r]
-
-(中略)[l][r]
-
-ああ、何もかも、ばかばかしい。私は、醜い裏切り者だ。どうとも、勝手にするがよい。やんぬる哉。[l][r]
-メロスは...[l][r]
-
-[link target=*tag_sleep] →寝る [endlink][r]
-[link target=*tag_run] →走る [endlink][r]
+[cm]
+[freeimage layer="0"]
+[layopt layer="0" visible="true"]
+[bg storage="starlight.svg" time="200"]
+[position layer="message0" left="70" top="370" width="1140" height="300" color="0x102136" opacity="235" margint="22" marginl="30" marginr="30" marginb="20"]
+[deffont size="23" color="0xF4E9D2" face="Yu Gothic"]
+[delay speed="15"]
+[ptext layer="0" x="76" y="65" size="20" color="0xEAC581" text="凪の町の、小さな選択の物語"]
+[ptext layer="0" x="70" y="110" size="58" color="0xFFF1D5" text="星あかりの配達便"]
+[ptext layer="0" x="76" y="198" size="23" color="0xD7E4E8" text="夜明けまでに、灯台へ。あなたは何を届けますか。"]
+[nowait]
+星の灯りで船を導く、架空の港町「凪の町」。[r]
+配達見習いのあなたは、灯台へ予備の星灯りを届けることになった。[r]
+所要時間：約3分 ／ 結末は3種類 ／ 文章はクリックで進みます。[r]
+[link target=*departure]　▶ 配達をはじめる　[endlink][r]
+[link target=*credits]　素材・作品について　[endlink][r]
+[link target=*legacy]　元の練習用ゲームを遊ぶ　[endlink]
+[endnowait]
 [s]
 
-*tag_sleep
-
+*legacy
 [cm]
+[freeimage layer="0"]
+[jump storage="melos-original.ks" target=*start]
 
-[bg storage=sleep.jpg time=500]
-
-メロスは死んだように深く眠った。[l][r]
-勇者は、ひどく赤面した。[r]
-
-【 BAD END 】[l][cm]
-
-[jump target=*start]
-
-*tag_run
-
-[bg storage=run.jpg time=500]
-
+*departure
 [cm]
-メロスは黒い風のように走った。[l][r]
-陽は、ゆらゆら地平線に没し、まさに最後の一片の残光も、消えようとした時、メロスは疾風の如く刑場に突入した。間に合った。[r]
+港の時計は、夜明けまであと一時間を指している。[r]
+灯台への道は二つ。海沿いの近道と、町を通る坂道だ。[r]
+近道の入口には「強風のため通行止め」の札がある。[l]
+[cm]
+[nowait]
+最初の選択 ／ どの道を選ぶ？[r][r]
+[link target=*coast]　海沿いの近道へ向かう　[endlink][r][r]
+[link target=*town]　町を通る安全な坂道を進む　[endlink]
+[endnowait]
+[s]
 
-【 GOOD END 】[l][cm]
+*coast
+[cm]
+海風は思った以上に強い。道の先は波で濡れている。[r]
+あなたは柵の手前で立ち止まった。[r]
+遠回りでも引き返すか、ここで風が弱まるのを待つか。[l]
+[cm]
+[nowait]
+二度目の選択 ／ どうする？[r][r]
+[link target=*town]　町の坂道へ引き返す　[endlink][r][r]
+[link target=*dawn]　安全な待避所で風が収まるのを待つ　[endlink]
+[endnowait]
+[s]
 
-[jump target=*start]
+*town
+[cm]
+坂の途中で、手押し車が動かなくなった灯具職人に出会った。[r]
+「灯台に届ける反射鏡なんだ。一緒に運んでくれないか」[r]
+星灯りだけなら、一人でも運べる。けれど鏡があれば、光は遠くへ届く。[l]
+[cm]
+[nowait]
+最後の選択 ／ あなたの配達は？[r][r]
+[link target=*together]　職人を手伝い、一緒に灯台へ向かう　[endlink][r][r]
+[link target=*solo]　自分の星灯りを先に届ける　[endlink]
+[endnowait]
+[s]
+
+*together
+[cm]
+二人で車輪を直し、星灯りと反射鏡を灯台へ運んだ。[r]
+夜明け前、光の輪が水平線まで広がる。[r]
+沖の船から、ありがとうの汽笛が聞こえた。[l]
+[cm]
+[nowait]
+【 END 1 / 3　遠くまで届く光 】[r][r]
+届けたのは星灯りと、誰かと協力する気持ち。[r]
+少し立ち止まった時間が、町のいちばん明るい夜をつくった。[r][r]
+[link target=*start]　▶ もう一度、配達する　[endlink]
+[endnowait]
+[s]
+
+*solo
+[cm]
+あなたは星灯りを抱えて坂を上り、約束の時刻に灯台へ着いた。[r]
+小さくても確かな光が、港の入口を照らす。[r]
+灯台守は「これで近くの船を案内できる」とほほえんだ。[l]
+[cm]
+[nowait]
+【 END 2 / 3　約束の灯り 】[r][r]
+届けたのは星灯りと、任された仕事を果たす気持ち。[r]
+次の配達では、もっと遠くへ光を届けられるだろうか。[r][r]
+[link target=*start]　▶ もう一度、配達する　[endlink]
+[endnowait]
+[s]
+
+*dawn
+[cm]
+待避所で待つうちに、水平線が淡い桃色に染まった。[r]
+船は港で待機しており、事故は起きなかった。[r]
+あなたは町へ戻って事情を伝え、翌日の配達を引き受けた。[l]
+[cm]
+[nowait]
+【 END 3 / 3　夜明けの再出発 】[r][r]
+今回は時間に間に合わなかった。でも、無理をせず帰ってこられた。[r]
+道を選び直すことも、配達の大切な仕事だ。[r][r]
+[link target=*start]　▶ もう一度、配達する　[endlink]
+[endnowait]
+[s]
+
+*credits
+[cm]
+[nowait]
+作品・素材について[r][r]
+本作の町・登場人物・出来事は架空です。実在人物は題材にしていません。[r]
+本作のシナリオと背景SVGは新規制作し、CC0で提供します。[r]
+ティラノスクリプト本体と既存素材は、それぞれの元の利用条件に従います。[r]
+既存の練習用シナリオ・写真は保存し、本作の物語には使用していません。[r][r]
+[link target=*start]　▶ タイトルへ戻る　[endlink]
+[endnowait]
+[s]
